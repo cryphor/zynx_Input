@@ -1,7 +1,10 @@
+from re import X
 import requests
 import time
 import random
 import string
+
+console.clear()
 
 banner = """
   ____  _   _ ____  _____ ____  _   _    __        __         _     ____  _   _ 
@@ -13,8 +16,10 @@ banner = """
 """
 print(banner)
 
+x = {x: f"{x}. View Offsets" for x in range(1, 2)}
+
+input(f"[$] Choose: ")
 
 
-
-
-print(requests.get("https://offsets.ntgetwritewatch.workers.dev/offsets.hpp").text)
+if x == "1":
+    print(requests.get("https://offsets.ntgetwritewatch.workers.dev/offsets.hpp").text)
